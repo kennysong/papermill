@@ -74,7 +74,8 @@ def parameterize_notebook(nb, parameters, report_mode=False, comment='Parameters
     nb = copy.deepcopy(nb)
 
     kernel_name = nb.metadata.kernelspec.name
-    language = nb.metadata.kernelspec.language
+#     language = nb.metadata.kernelspec.language
+    language = 'python'
 
     # Generate parameter content based on the kernel_name
     param_content = translate_parameters(kernel_name, language, parameters, comment)
